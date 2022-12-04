@@ -1,6 +1,5 @@
 import { DayEntity } from '../abstract/day-entity';
-//import * as fs from 'fs';
-//import * as path from 'path';
+import { InputData } from './input-data';
 
 export class Day1 implements DayEntity {
   private fileName: string = 'input.txt';
@@ -11,10 +10,15 @@ export class Day1 implements DayEntity {
   }
 
   public resolve(): string {
-    /*let fileContent = fs.readFileSync(
-      path.join(__dirname, this.fileName),
-      'utf8'
-    );*/
-    return 'fileContent';
+    const data = InputData.getData();
+    const arr = data.split('\n\n');
+    const sumArray: number[] = [];
+    arr.forEach((x) => {
+      const arr2 = x.split('\n').map((y) => +y);
+      let sum = 0;
+      arr2.forEach((y) => (sum += y));
+      sumArray.push(sum);
+    });
+    return Math.max(...sumArray).toString();
   }
 }
