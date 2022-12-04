@@ -5,7 +5,7 @@ export class Day1 implements DayEntity {
   private fileName: string = 'input.txt';
 
   public gedDayAsString(): string {
-    const date = new Date(2022, 12, 1);
+    const date = new Date(2022, 11, 1);
     return date.toDateString();
   }
 

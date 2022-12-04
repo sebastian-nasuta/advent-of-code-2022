@@ -1,9 +1,10 @@
 // Import stylesheets
 import './style.css';
-import { Main } from './main';
+import { Day2 as Day } from './days';
 
 // Write TypeScript code!
+const day: Day = new Day();
 const appDiv: HTMLElement = document.getElementById('app');
-appDiv.innerHTML = `<h1>Result in ${Main.getDay().gedDayAsString()}</h1>
+appDiv.innerHTML = `<h1>Result in ${day.gedDayAsString()}</h1>
 <hr />
-<span>${Main.getDay().resolve()}</span>`;
+<span>${day.resolve()}</span>`;
