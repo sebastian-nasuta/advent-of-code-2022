@@ -22,6 +22,10 @@ export class Day2 implements DayEntity {
     return result.toString();
   }
 
+  public resolve2(): string {
+    return 'TODO';
+  }
+
   private getResultScore(
     opponentWeapon: OpponentWeapon,
     yourWeapon: YourWeapon

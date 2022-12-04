@@ -10,6 +10,21 @@ export class Day1 implements DayEntity {
   }
 
   public resolve(): string {
+    return Math.max(...this.getSummaryArray()).toString();
+  }
+
+  public resolve2(): string {
+    const sumArray = this.getSummaryArray();
+
+    for (let i = 0; i < 3; i++) {
+      console.log(i);
+    }
+
+    //sumArray.slice(sumArray.indexOf())
+    return 'TODO';
+  }
+
+  private getSummaryArray(): number[] {
     const data = InputData.getData();
     const arr = data.split('\n\n');
     const sumArray: number[] = [];
@@ -19,10 +34,6 @@ export class Day1 implements DayEntity {
       arr2.forEach((y) => (sum += y));
       sumArray.push(sum);
     });
-    return Math.max(...sumArray).toString();
-  }
-
-  public resolve2(): string {
-    return 'TODO';
+    return sumArray;
   }
 }
