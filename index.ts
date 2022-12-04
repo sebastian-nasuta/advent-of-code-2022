@@ -8,4 +8,6 @@ const appDiv: HTMLElement = document.getElementById('app');
 
 appDiv.innerHTML = `<h1>Result in ${day.gedDayAsString()}</h1>
 <hr />
-<span>${day.resolve()}</span>`;
+<span>${day.resolve()}</span>
+<br />
+<span>${day.resolve2()}</span>`;

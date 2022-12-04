@@ -21,4 +21,8 @@ export class Day1 implements DayEntity {
     });
     return Math.max(...sumArray).toString();
   }
+
+  public resolve2(): string {
+    return 'TODO';
+  }
 }
