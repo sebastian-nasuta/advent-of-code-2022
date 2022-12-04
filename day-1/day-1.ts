@@ -1,9 +1,9 @@
 import { DayEntity } from '../abstract/day-entity';
-import * as fs from 'fs';
-import * as path from 'path';
+//import * as fs from 'fs';
+//import * as path from 'path';
 
 export class Day1 implements DayEntity {
-  private fileName: string = 'input-data.txt';
+  private fileName: string = 'input.txt';
 
   public gedDayAsString(): string {
     const date = new Date(2022, 12, 1);
@@ -11,10 +11,10 @@ export class Day1 implements DayEntity {
   }
 
   public resolve(): string {
-    let fileContent = fs.readFileSync(
+    /*let fileContent = fs.readFileSync(
       path.join(__dirname, this.fileName),
       'utf8'
-    );
-    return fileContent;
+    );*/
+    return 'fileContent';
   }
 }
