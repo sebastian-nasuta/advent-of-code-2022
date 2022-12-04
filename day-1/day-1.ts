@@ -11,10 +11,10 @@ export class Day1 implements DayEntity {
   }
 
   public resolve(): string {
-    return 'TODO: result';
     let fileContent = fs.readFileSync(
       path.join(__dirname, this.fileName),
       'utf8'
     );
+    return fileContent;
   }
 }
