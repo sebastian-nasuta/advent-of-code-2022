@@ -14,14 +14,14 @@ export class Day1 implements DayEntity {
   }
 
   public resolve2(): string {
-    const sumArray = this.getSummaryArray();
-
+    let sumArray = this.getSummaryArray();
+    let result = 0;
     for (let i = 0; i < 3; i++) {
-      console.log(i);
+      const max = Math.max(...sumArray);
+      result += max;
+      sumArray.splice(sumArray.indexOf(max), 1);
     }
-
-    //sumArray.slice(sumArray.indexOf())
-    return 'TODO';
+    return result.toString();
   }
 
   private getSummaryArray(): number[] {

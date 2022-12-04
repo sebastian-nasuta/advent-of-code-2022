@@ -21,3 +21,9 @@ export enum ResultScore {
   draw = 3,
   won = 6,
 }
+
+export enum MatchResult {
+  lost = 'X',
+  draw = 'Y',
+  won = 'Z',
+}
