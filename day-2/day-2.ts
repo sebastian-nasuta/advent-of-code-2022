@@ -9,6 +9,7 @@ export class Day2 implements DayEntity {
 
   public resolve(): string {
     const data = InputData.getData();
+    console.log(data);
     return 'TODO';
   }
 }
