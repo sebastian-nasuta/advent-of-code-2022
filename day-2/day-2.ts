@@ -6,7 +6,7 @@ import {
   WeaponScore,
   YourWeapon,
 } from './enums';
-import { InputData } from './input-data';
+import { InputData } from './input-data-2';
 
 export class Day2 implements DayEntity {
   public gedDayAsString(): string {

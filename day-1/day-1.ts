@@ -1,9 +1,7 @@
 import { DayEntity } from '../abstract/day-entity';
-import { InputData } from './input-data';
+import { InputData } from './input-data-1';
 
 export class Day1 implements DayEntity {
-  private fileName: string = 'input.txt';
-
   public gedDayAsString(): string {
     const date = new Date(2022, 11, 1);
     return date.toDateString();
