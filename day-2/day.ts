@@ -6,9 +6,9 @@ import {
   WeaponScore,
   YourWeapon,
 } from './enums';
-import { InputData } from './input-data-2';
+import { InputData } from './input-data';
 
-export class Day2 implements DayEntity {
+export class Day implements DayEntity {
   public getDayAsString(): string {
     const date = new Date(2022, 11, 2);
     return date.toDateString();
