@@ -28,7 +28,28 @@ export class Day3 implements DayEntity {
   }
 
   public resolve2(): string {
-    return 'TODO';
+    const rucksacks = InputData.getData().split('\n');
+    let result = 0;
+    let currentGroup: string[] = [];
+    for (let i = 0; i < rucksacks.length; i++) {
+      currentGroup.push(rucksacks[i]);
+      if ((i + 1) % 3 === 0) {
+        console.log(currentGroup);
+        let done = false;
+        currentGroup[0].split('').forEach((item) => {
+          if (
+            !done &&
+            currentGroup[1].includes(item) &&
+            currentGroup[2].includes(item)
+          ) {
+            result += this.getItemPriority(item);
+            done = true;
+          }
+        });
+        currentGroup = [];
+      }
+    }
+    return result.toString();
   }
 
   private getItemPriority(item: string): number {
