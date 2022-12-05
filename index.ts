@@ -6,8 +6,7 @@ import { Day4 as Day } from './days';
 const day: Day = new Day();
 const appDiv: HTMLElement = document.getElementById('app');
 
-appDiv.innerHTML = `<h1>Result in ${day.gedDayAsString()}</h1>
+appDiv.innerHTML = `<h1>AOC - ${day.getDayAsString()}</h1>
 <hr />
-<span>${day.resolve()}</span>
-<br />
-<span>${day.resolve2()}</span>`;
+<h2>${day.resolve()}</h2>
+<h2>${day.resolve2()}</h2>`;

@@ -1,5 +1,5 @@
 export interface DayEntity {
-  gedDayAsString(): string;
+  getDayAsString(): string;
   resolve(): string;
   resolve2(): string;
 }

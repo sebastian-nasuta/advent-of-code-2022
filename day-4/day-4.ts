@@ -2,7 +2,7 @@ import { DayEntity } from '../abstract/day-entity';
 import { InputData } from './input-data-4';
 
 export class Day4 implements DayEntity {
-  public gedDayAsString(): string {
+  public getDayAsString(): string {
     const date = new Date(2022, 11, 4);
     return date.toDateString();
   }
