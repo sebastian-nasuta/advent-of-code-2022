@@ -34,7 +34,6 @@ export class Day3 implements DayEntity {
     for (let i = 0; i < rucksacks.length; i++) {
       currentGroup.push(rucksacks[i]);
       if ((i + 1) % 3 === 0) {
-        console.log(currentGroup);
         let done = false;
         currentGroup[0].split('').forEach((item) => {
           if (
