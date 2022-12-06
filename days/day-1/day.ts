@@ -1,4 +1,4 @@
-import { DayEntity } from '../abstract/day-entity';
+import { DayEntity } from '../../abstract/day-entity';
 import { InputData } from './input-data';
 
 export class Day implements DayEntity {
@@ -8,7 +8,7 @@ export class Day implements DayEntity {
   }
 
   public resolve(): string {
-    return Math.max(...this.getSummaryArray()).toString();
+    return Math.max(...this.getSummaryArray()).toString() + '⭐';
   }
 
   public resolve2(): string {
@@ -19,7 +19,7 @@ export class Day implements DayEntity {
       result += max;
       sumArray.splice(sumArray.indexOf(max), 1);
     }
-    return result.toString();
+    return result.toString() + '⭐';
   }
 
   private getSummaryArray(): number[] {

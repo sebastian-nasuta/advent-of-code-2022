@@ -1,4 +1,4 @@
-import { DayEntity } from '../abstract/day-entity';
+import { DayEntity } from '../../abstract/day-entity';
 import { InputData } from './input-data';
 
 export class Day implements DayEntity {
@@ -21,7 +21,7 @@ export class Day implements DayEntity {
         result++;
       }
     });
-    return result.toString();
+    return result.toString() + '⭐';
   }
 
   public resolve2(): string {
@@ -38,6 +38,6 @@ export class Day implements DayEntity {
         result++;
       }
     });
-    return result.toString();
+    return result.toString() + '⭐';
   }
 }

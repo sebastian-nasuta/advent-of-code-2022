@@ -1,4 +1,4 @@
-import { DayEntity } from '../abstract/day-entity';
+import { DayEntity } from '../../abstract/day-entity';
 import {
   MatchResult,
   OpponentWeapon,
@@ -17,14 +17,14 @@ export class Day implements DayEntity {
   public resolve(): string {
     const data = InputData.getData();
     const arr1 = data.split('\n');
-    return this.calculateResult(arr1).toString();
+    return this.calculateResult(arr1).toString() + '⭐';
   }
 
   public resolve2(): string {
     const data = InputData.getData();
     const arr1 = data.split('\n');
     const arr2 = this.replaceResultWithWeapon(arr1);
-    return this.calculateResult(arr2).toString();
+    return this.calculateResult(arr2).toString() + '⭐';
   }
 
   private replaceResultWithWeapon(arr: string[]): string[] {
