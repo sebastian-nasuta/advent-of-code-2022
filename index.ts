@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import { Day } from './days/day-4/day';
+import { Day } from './days/day-1/day';
 
 // Write TypeScript code!
 const day: Day = new Day();

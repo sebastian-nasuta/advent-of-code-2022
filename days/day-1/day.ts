@@ -1,5 +1,6 @@
 import { DayEntity } from '../../abstract/day-entity';
 import { InputData } from './input-data';
+import * as fs from 'fs';
 
 export class Day implements DayEntity {
   public getDayAsString(): string {
@@ -23,7 +24,7 @@ export class Day implements DayEntity {
   }
 
   private getSummaryArray(): number[] {
-    const data = InputData.getData();
+    const data = this.getData();
     const arr = data.split('\n\n');
     const sumArray: number[] = [];
     arr.forEach((x) => {
@@ -33,5 +34,9 @@ export class Day implements DayEntity {
       sumArray.push(sum);
     });
     return sumArray;
+  }
+
+  private getData(): string {
+    return fs.readFileSync('./input.txt', 'utf8');
   }
 }
