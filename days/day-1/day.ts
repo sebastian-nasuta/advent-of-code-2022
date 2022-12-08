@@ -24,7 +24,7 @@ export class Day implements DayEntity {
   }
 
   private getSummaryArray(): number[] {
-    const data = this.getData();
+    const data = InputData.getData();
     const arr = data.split('\n\n');
     const sumArray: number[] = [];
     arr.forEach((x) => {
@@ -34,10 +34,5 @@ export class Day implements DayEntity {
       sumArray.push(sum);
     });
     return sumArray;
-  }
-
-  private getData(): string {
-    const currentDirectory = __dirname;
-    return fs.readFileSync('./input', 'utf8');
   }
 }
