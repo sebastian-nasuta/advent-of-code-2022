@@ -38,6 +38,6 @@ export class Day implements DayEntity {
 
   private getData(): string {
     const currentDirectory = __dirname;
-    return fs.readFileSync(`${currentDirectory}/d/input.txt`, 'utf8');
+    return fs.readFileSync(`${currentDirectory}/input.txt`, 'utf8');
   }
 }
